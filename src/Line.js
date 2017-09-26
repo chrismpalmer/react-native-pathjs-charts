@@ -99,8 +99,9 @@ export default class LineChart extends Component {
     let areas = null
 
     if(showAreas){
+      let areaOpacity = typeof(this.props.options.areaOpacity) !== 'undefined' ? this.props.options.areaOpacity : 0.5;
       areas = _.map(chart.curves, function (c, i) {
-        return <Path key={'areas' + i} d={ c.area.path.print() } fillOpacity={0.5} stroke="none" fill={ this.color(i) }/>
+        return <Path key={'areas' + i} d={ c.area.path.print() } fillOpacity={areaOpacity} stroke="none" fill={ this.color(i) }/>
       }.bind(this))
     }
 
