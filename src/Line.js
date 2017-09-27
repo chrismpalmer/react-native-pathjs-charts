@@ -165,8 +165,6 @@ export default class LineChart extends Component {
                         { regions }
                         { areas }
                         { lines }
-                      <Axis key="x" scale={chart.xscale} options={options.axisX} chartArea={chartArea} />
-                      <Axis key="y" scale={chart.yscale} options={options.axisY} chartArea={chartArea} />
                   </G>
               </Svg>
 
